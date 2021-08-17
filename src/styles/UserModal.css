@@ -23,7 +23,16 @@
     align-items: center;
  
     border-radius: 25px;
+
+    margin: auto;
 }
+
+/* .container img {
+    width: 120px;
+    height: 120px;
+
+    
+} */
 
 .close {
     background-color: transparent;

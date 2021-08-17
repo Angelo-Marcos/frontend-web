@@ -1,8 +1,12 @@
 import '../styles/UserModal.css'
 
+import logo from '../assets/images/logo.png'
+
 export function UserModal({id='modal', onClose = () => {}, children}) {
     
     const handleOutsideClick = (event) => {
+        event.preventDefault();
+        
         if (event.target.id === id) onClose();
     };
 
@@ -11,7 +15,7 @@ export function UserModal({id='modal', onClose = () => {}, children}) {
             <div className="container">
                 <button className="close" onClick={onClose}/>
                 <div className="content">{children}</div>
-                
+                {/* <img src={logo} alt="Logo do Restaurante" /> */}
                 <div className="separator">Insira as informações abaixo</div>
                 <form>
                     <input
