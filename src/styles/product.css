@@ -1,0 +1,56 @@
+.btn-product {
+    height: 150px;
+    margin: 20px;
+    background: none;
+
+    cursor: pointer;
+    border: 0;
+
+    transition: filter 0.2s;
+    
+}
+
+.product {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "nome foto"
+        "ingredients foto";
+    width: 400px;
+    height: 150px;
+
+    text-align: left;
+    margin: 0;
+    padding: 10px;
+    border: 2px solid #B7FF45;
+    border-radius: 10px;
+}
+
+.product strong{
+    grid-area: nome;
+    font-size: 18px;
+    color: #000000;
+}
+
+.product strong p {
+    grid-area: ingredients;
+    font-size: 16px;
+    color: #848484;
+}
+
+.product p {
+    grid-area: ingredients;
+    font-size: 18px;
+    color: #848484;
+}
+
+.product img {
+    grid-area: foto;
+    width: 100px;
+    height: 100px;
+
+    margin: auto;
+
+    border-radius: 15px;
+}

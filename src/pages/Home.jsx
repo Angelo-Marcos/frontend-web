@@ -17,7 +17,7 @@ export function Home() {
         history.push('/pedido/');
     }
 
-    function navigateToCaradapio() {
+    function navigateToCardapio() {
         history.push('/cardapio')
     }
 
@@ -31,8 +31,8 @@ export function Home() {
                 <p>Faça o seu pedido!</p>
             </div>
             <div className="buttons">
-                <button className="btn-main" onClick={navigateToPedido, () => setIsUserModalVisible(true)}>Fazer Pedido</button>
-                <button className="btn-main" onClick={navigateToCaradapio}>Ver Cardápio</button>
+                <button className="btn-main" onClick={() => setIsUserModalVisible(true)}>Fazer Pedido</button>
+                <button className="btn-main" onClick={navigateToCardapio}>Ver Cardápio</button>
                 {isUserModalVisible ? (
                     <UserModal onClose={() => setIsUserModalVisible(false)}> 
                     

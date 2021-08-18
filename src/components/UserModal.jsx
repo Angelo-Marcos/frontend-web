@@ -1,6 +1,4 @@
-import '../styles/UserModal.css'
-
-import logo from '../assets/images/logo.png'
+import '../styles/userModal.css'
 
 export function UserModal({id='modal', onClose = () => {}, children}) {
     

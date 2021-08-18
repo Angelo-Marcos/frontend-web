@@ -1,14 +1,19 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import logo from '../assets/images/logo.png'
 import exit from '../assets/images/exit.png'
 import bag from '../assets/images/handbag.svg'
-import product from '../assets/images/product.jpg'
+
 
 import '../styles/pedido.css'
 
+import { Product } from '../components/Product'
+
+
 
 export function Pedido() {
+
     return ( 
         <div id="page-pedido">
             <div className="header">
@@ -21,21 +26,14 @@ export function Pedido() {
                    <button><img src={bag} alt="Buy" /></button> 
                 </div>
             </div>
-            <main>
-                <a href="#">
-                    <div className="product">
-                        <strong>Nome produto <p>Ingredientes produto</p> </strong>
-                        
-                        <img src={product} alt="Imagem Produto" />
-                        <p>Valor produto</p>
-                    </div>
-                </a> 
-                <div className="product">
-                    <strong>Nome produto <p>Ingredientes produto</p> </strong>
-                    
-                    <img src={product} alt="Imagem Produto" />
-                    <p>Valor produto</p>
-                </div>
+            <main className="grid-main">
+                
+                <Product/>
+                <Product/>
+                <Product/>
+                
+                
+                
             </main>
             
         </div>
