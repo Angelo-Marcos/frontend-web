@@ -1,4 +1,5 @@
 import '../styles/productModal.css'
+import product from '../assets/images/product.jpg'
 
 export function ProductModal({id='modal', onClose = () => {}, children}) {
     
@@ -12,7 +13,7 @@ export function ProductModal({id='modal', onClose = () => {}, children}) {
         <div id={id} className="product-modal" onClick={handleOutsideClick}>
             <div className="container">
                 <div className="content-img">
-                    <img src="#" alt="Imagem Produto" />
+                    <img src="" alt="Imagem Produto" />
                 </div>
                 <div className="content-main">
                     <header>
@@ -22,6 +23,22 @@ export function ProductModal({id='modal', onClose = () => {}, children}) {
                         
                         <button className="close" onClick={onClose}/>
                     </header>
+
+                    <p>Ingredientes</p>
+
+                    <div className="product-rodape">
+                        <div className="product-counter">
+                            <button type="button" >-</button>
+                            <div>1</div>
+                            <button type="button" >+</button>
+                            
+                        </div>
+                        <button className="product-button" type="submit">
+                            <strong>Adicionar</strong>
+                            <p>Valor</p>
+                        </button>
+                    </div>
+
                 </div>
                 
             

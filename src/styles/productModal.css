@@ -4,8 +4,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 10;
-    background-color: transparent();
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.8);
     opacity: 1;
     
     display: flex;
@@ -13,50 +13,71 @@
     align-items: center;
 }
 
-.container {
+.product-modal .container {
     background-color: #fff; 
     color: #000000;
-    width: 70%;
-    height: 70%;
+    width: 50%;
+    height: 50%;
     display: flex;
+    align-items: stretch;
  
     border-radius: 25px;
 
     margin: auto;
 }
 
-.container .content-img {
-    flex: 3;
-    background: #835afd;
+.product-modal .container .content-img {
+    flex: 4;
     color: #FFF;
+    width: 400px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.container .content-main {
-    flex: 4;
-    display: flex;
+/* .content-img img {
+    width: 200px;
+    height: 200px;
+
+    margin: auto;
+    border-radius: 15px;
+} */
+
+.product-modal .container .content-main {
+    flex: 3;
+    display: block;
+
+    font: 400 16px 'Poppins', sans-serif;
+
+    padding: 10px 25px 10px 25px;
+
     
     
+    /* height: 700px; */
 }
 
-header {
+.content-main header {
     display: flex;
+    align-items: center;
+    justify-content: center;
     
-    /* justify-content: end; */
-    width: 70%;
+
+    height: 10%;
 }
 
-.close {
+.content-main header p {
+    text-align: center;
+}
+
+.content-main .close {
     background-color: transparent;
     border: none;
     outline: none;
     width: 32px;
     height: 32px;
-    /* right: calc(-125% + 36px);
-    top: 0; */
+    right: calc(-35% );
+    top: 0;
     cursor: pointer;
 
     display: flex;
@@ -78,4 +99,48 @@ header {
 
 .close::after {
     transform: rotate(-45deg);
+}
+
+.content-main .product-rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 10%;
+
+    margin: 200px 25px 10px 25px;
+}
+
+.product-rodape .product-counter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 8px;
+
+    width: 90px;
+    height: 30px;
+    border: 1px solid #B7FF45;
+    margin-right: 150px;
+}
+
+.product-counter button {
+    border: 0;
+    color: #B7FF45;
+    font: 700;
+    background: none;
+}
+
+.product-rodape .product-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 50%;
+    height: 120%;
+    margin-right: 50px;
+    padding: 0 15px 0 15px;
+    border: 0;
+    border-radius: 5px;
+    background: #B7FF45;
 }
