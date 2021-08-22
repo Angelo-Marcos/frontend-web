@@ -1,44 +1,77 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 import logo from '../assets/images/logo.png'
 import exit from '../assets/images/exit.png'
 import bag from '../assets/images/handbag.svg'
 
+import { BagModal } from '../components/BagModal'
+
 
 import '../styles/pedido.css'
 
 import { Product } from '../components/Product'
+
+import { ListProducts } from '../components/ListProducts'
+
 import { Produto } from '../components/Produtos'
 
 
 
+
 export function Pedido() {
+    const [isBagModalVisible, setIsBagModalVisible] = useState(false);
+
+    const [ products, setProducts] = useState([]);
+    const [search, setSearch] = useState('');
+
+
+    useEffect(() => {
+        const params = {};
+        
+        if (search) {
+            params.nome_like = search;
+        }
+
+        axios.get('http://localhost:5000/products', { params })
+            .then((response) => {
+                setProducts(response.data);
+            });
+    }, [search]);
+    
 
     return (
         <div id="page-pedido">
             <div className="header">
-                <a href="#"><img src={logo} alt="Logo do Restaurante" /></a>
 
-                <p>Bem vindo, <strong>Angelo!</strong> </p>
-
+                <img src={logo} alt="Logo do Restaurante" />
+                
+                <p>Bem vindo, <strong>Angelo!</strong> </p> 
+                
                 <div className="exit-buy">
-                    <Link to="/"><img src={exit} alt="Exit" /></Link>
-                    <button><img src={bag} alt="Buy" /></button>
+                    <Link className="btn-buy" to="/"><img src={exit} alt="Exit" /></Link> 
+                   <button className="btn-exit"onClick={() => setIsBagModalVisible(true)}><img src={bag} alt="Buy" /></button> 
+                   {isBagModalVisible ? (
+                    <BagModal onClose={() => setIsBagModalVisible(false)}> 
+                        
+                    </BagModal>
+                ) : null}
                 </div>
             </div>
-            <main className="grid-main">
+            <div className="search">
+            <input 
+                type="search"
+                className="input-product"
+                placeholder="Buscar um produto" 
+                value={search}
+                onChange={(event) => setSearch(event.target.value)}
 
-                <Product />
-                <Product />
-                <Product />
-                <Product />
+            />
+            </div>
 
-
-
-
-
-            </main>
+            <ListProducts products={products} loading={!products.length}/>
+            
 
         </div>
     )

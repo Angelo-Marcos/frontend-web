@@ -13,51 +13,54 @@
     align-items: center;
 }
 
-.product-modal .container {
-    background-color: #fff; 
-    color: #000000;
-    width: 50%;
-    height: 50%;
+.product-modal .container-product {
     display: flex;
     align-items: stretch;
- 
+
+    background-color: #fff; 
+    color: #000000;
+    
+    width: 700px;
+    height: 350px;
     border-radius: 25px;
 
-    margin: auto;
+    /* margin: auto; */
 }
 
-.product-modal .container .content-img {
-    flex: 4;
+.product-modal .container-product .content-img {
+    flex: 3;
     color: #FFF;
-    width: 400px;
+    width: 250px;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-/* .content-img img {
+.content-img img {
     width: 200px;
     height: 200px;
 
     margin: auto;
-    border-radius: 15px;
-} */
+    /* border-radius: 15px; */
+}
 
-.product-modal .container .content-main {
-    flex: 3;
+.product-modal .container-product .content-main {
+    flex: 4;
     display: block;
+    width: 350px;
 
     font: 400 16px 'Poppins', sans-serif;
 
-    padding: 10px 25px 10px 25px;
+    padding: 10px 15px 10px 15px;
 
     
     
     /* height: 700px; */
 }
 
-.content-main header {
+.content-main .header-product {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,7 +69,7 @@
     height: 10%;
 }
 
-.content-main header p {
+.content-main .header-product p {
     text-align: center;
 }
 
@@ -99,7 +102,7 @@
 
 .close::after {
     transform: rotate(-45deg);
-}
+} 
 
 .content-main .product-rodape {
     display: flex;
@@ -121,7 +124,7 @@
     width: 90px;
     height: 30px;
     border: 1px solid #B7FF45;
-    margin-right: 150px;
+    margin-right: 75px;
 }
 
 .product-counter button {
@@ -131,16 +134,24 @@
     background: none;
 }
 
+.product-counter .quant {
+    padding: 0 10px 0 10px;
+}
+
 .product-rodape .product-button {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    width: 50%;
+    width: 250px;
     height: 120%;
-    margin-right: 50px;
+    
     padding: 0 15px 0 15px;
     border: 0;
     border-radius: 5px;
     background: #B7FF45;
+}
+
+.product-button p {
+    margin: 0;
 }
