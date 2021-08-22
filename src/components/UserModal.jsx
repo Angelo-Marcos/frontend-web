@@ -5,6 +5,7 @@ import axios from 'axios';
 
 import '../styles/userModal.css'
 
+
 const initialValue = {
     cpf: 0,
     nome: ''
@@ -14,9 +15,12 @@ export function UserModal({id='modal', onClose = () => {}}) {
     const history = useHistory();
     const [values, setValues] = useState(initialValue);
     console.log(values)
+
+export function UserModal({ id = 'modal', onClose = () => { }, children }) {
+
     const handleOutsideClick = (event) => {
         event.preventDefault();
-        
+
         if (event.target.id === id) onClose();
     };
 
@@ -43,8 +47,14 @@ export function UserModal({id='modal', onClose = () => {}}) {
     return (
         <div id={id} className="user-modal" onClick={handleOutsideClick}>
             <div className="container">
+
                 <button className="close" onClick={onClose}/>
                 
+
+                <button className="close" onClick={onClose} />
+                <div className="content">{children}</div>
+                {/* <img src={logo} alt="Logo do Restaurante" /> */}
+
                 <div className="separator">Insira as informações abaixo</div>
                 <form onSubmit={onSubmit}>
                     <input
@@ -59,8 +69,15 @@ export function UserModal({id='modal', onClose = () => {}}) {
                         placeholder="Digite o seu nome ou apelido"
                         onChange={onchange}
                     />
+
                     <button type="submit" onClick={navigateToPedido} >Confirmar</button>
                 </form> 
+
+                    <button type="submit">
+                        Confirmar
+                    </button>
+                </form>
+
             </div>
         </div>
     )

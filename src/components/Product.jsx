@@ -13,6 +13,7 @@ export function Product({ nome, ingredientes, imageUrl, preco}) {
         <div>
             <button className="btn-product" onClick={() => setIsProductModalVisible(true)}>
                 <div className="product">
+
                 <strong>{nome}<p>{ingredientes}</p> </strong>
                     <img src={imageUrl} alt="Imagem Produto" />
                     <p>R$ {preco}</p>
@@ -27,11 +28,20 @@ export function Product({ nome, ingredientes, imageUrl, preco}) {
                         imageUrl={imageUrl}
                         preco={preco}
                     /> 
-                        
-                    
+
+                    <strong>Nome produto <p>Ingredientes produto</p> </strong>
+                    <img src={product} alt="Imagem Produto" />
+                    <p>Valor produto</p>
+                </div>
+            </button>
+            <div className="modal-product">
+                {isProductModalVisible ? (
+                    <ProductModal onClose={() => setIsProductModalVisible(false)}>
+
+                    </ProductModal>
                 ) : null}
             </div>
         </div>
-             
+
     )
-} 
+}

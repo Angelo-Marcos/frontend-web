@@ -12,7 +12,11 @@ import { BagModal } from '../components/BagModal'
 import '../styles/pedido.css'
 
 import { Product } from '../components/Product'
+
 import { ListProducts } from '../components/ListProducts'
+
+import { Produto } from '../components/Produtos'
+
 
 
 
@@ -37,9 +41,10 @@ export function Pedido() {
     }, [search]);
     
 
-    return ( 
+    return (
         <div id="page-pedido">
             <div className="header">
+
                 <img src={logo} alt="Logo do Restaurante" />
                 
                 <p>Bem vindo, <strong>Angelo!</strong> </p> 
@@ -67,7 +72,7 @@ export function Pedido() {
 
             <ListProducts products={products} loading={!products.length}/>
             
-            
+
         </div>
     )
 }
