@@ -1,7 +1,7 @@
 import '../styles/productModal.css'
 import product from '../assets/images/product.jpg'
 
-export function ProductModal({id='modal', onClose = () => {}, children}) {
+export function ProductModal({id='modal', onClose = () => {}, nome, ingredientes, imageUrl, preco}) {
     
     const handleOutsideClick = (event) => {
         event.preventDefault();
@@ -11,31 +11,31 @@ export function ProductModal({id='modal', onClose = () => {}, children}) {
 
     return (
         <div id={id} className="product-modal" onClick={handleOutsideClick}>
-            <div className="container">
+            <div className="container-product">
                 <div className="content-img">
-                    <img src="" alt="Imagem Produto" />
+                    <img src={imageUrl} alt="Imagem Produto" />
                 </div>
                 <div className="content-main">
-                    <header>
+                    <header className="header-product">
                         <p>
-                        Nome Produto
+                        {nome}
                         </p>
                         
                         <button className="close" onClick={onClose}/>
                     </header>
 
-                    <p>Ingredientes</p>
+                    <p>{ingredientes}</p>
 
                     <div className="product-rodape">
                         <div className="product-counter">
                             <button type="button" >-</button>
-                            <div>1</div>
+                            <div className="quant">1</div>
                             <button type="button" >+</button>
                             
                         </div>
                         <button className="product-button" type="submit">
                             <strong>Adicionar</strong>
-                            <p>Valor</p>
+                            <p>R$ {preco}</p>
                         </button>
                     </div>
 
