@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom'
 import logo from '../assets/images/logo.png'
 import exit from '../assets/images/exit.png'
 import adicionar from '../assets/images/adicionar.png'
+import adicionar2 from '../assets/images/add.png'
+import deletar from '../assets/images/delete2.png'
+
 
 
 import '../styles/pedido.css'
@@ -25,7 +28,7 @@ export function InserirProdutos() {
 
                 <div className="exit-buy">
                     <Link to="/"><img src={exit} alt="Exit" /></Link>
-                    <button><img src={adicionar} alt="Buy" /><Produtos /></button>
+                    <button><img src={adicionar2} alt="Buy" /><Produtos /></button>
                 </div>
             </div>
             <main className="grid-main">

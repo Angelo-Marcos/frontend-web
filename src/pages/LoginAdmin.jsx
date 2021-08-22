@@ -17,9 +17,9 @@ export function LoginAdmin() {
     //     history.push('/pedido/');
     // }
 
-    // function navigateToCardapio() {
-    //     history.push('/cardapio')
-    // }
+    function navigateToInserirProdutos() {
+        history.push('/produtos')
+    }
 
     const [isUserModalVisible, setIsUserModalVisible] = useState(false);
 
@@ -28,7 +28,6 @@ export function LoginAdmin() {
             <div className="title">
                 <img src={logo} alt="Logo do Restaurante" />
                 <strong>Delícia Caseira</strong>
-
 
 
 
@@ -42,16 +41,18 @@ export function LoginAdmin() {
                         type="text"
                         placeholder="Digite a sua senha"
                     />
-                    <button type="submit">
-                        Entrar
 
+                    <div className="buttons">
 
-                    </button>
+                        <button className="btn-main" onClick={navigateToInserirProdutos}>Entrar</button>
+                        {isUserModalVisible ? (
+                            <UserModal onClose={() => setIsUserModalVisible(false)}>
+
+                            </UserModal>
+                        ) : null}
+                    </div>
+
                 </form>
-
-
-
-
 
 
 
