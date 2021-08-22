@@ -9,10 +9,10 @@ export function ProdutosModal({ id = 'modal', onClose = () => { }, children }) {
     };
 
     return (
-        <div id={id} className="product-modal" onClick={handleOutsideClick}>
+        <div id={id} className="produtos-modal" onClick={handleOutsideClick}>
             <div className="container">
 
-                <div className="product-button" >
+                <div className="produtos-button" >
                     <header>
                         <button className="close" onClick={onClose} />
                     </header>
@@ -34,9 +34,9 @@ export function ProdutosModal({ id = 'modal', onClose = () => { }, children }) {
                     </form>
 
 
-                    <div className="product-rodape">
+                    <div className="produtos-rodape">
 
-                        <button className="product-button-altura" type="submit">
+                        <button className="produtos-button-altura" type="submit">
                             <strong>Adicionar</strong>
                         </button>
                     </div>

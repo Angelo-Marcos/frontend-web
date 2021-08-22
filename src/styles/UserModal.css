@@ -13,7 +13,7 @@
     align-items: center;
 }
 
-.container {
+.container-user-modal {
     background-color: #fff; 
     color: #000000;
     width: 50%;
@@ -65,7 +65,7 @@
     transform: rotate(-45deg);
 }
 
-.separator {
+.separator-user {
     font-size: 16px;
     color: #a8a8b3;
 
@@ -79,7 +79,7 @@
     width: 50%;
 }
 
-.separator::before {
+.separator-user::before {
     content: '';
     flex: 1;
     height: 1px;
@@ -87,7 +87,7 @@
     margin-right: 16px;
 }
 
-.separator::after {
+.separator-user::after {
     content: '';
     flex: 1;
     height: 1px;
@@ -95,7 +95,7 @@
     margin-left: 16px;
 }
 
-form {
+.form-user {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,7 +103,7 @@ form {
     margin: 10px auto;
 }
 
-form input{  
+.form-user input{  
     height: 50px;
     border-radius: 8px;
     padding: 0 16px;
@@ -112,7 +112,7 @@ form input{
     margin-top: 16px;
 }
 
-form button {
+.form-user button {
     height: 50px;
     border-radius: 15px;
     font-size: 18px;
@@ -131,7 +131,7 @@ form button {
     transition: filter 0.2s;
 }
 
-form button,
-form input {
+.form-user button,
+.form-user input {
     width: 50%;
 }

@@ -1,6 +1,6 @@
 import { Home } from "./pages/Home";
 import { Pedido } from "./pages/Pedido";
-import { Cardapio } from "./pages/Caradapio";
+import { Cardapio } from "./pages/Cardapio";
 import { LoginAdmin } from "./pages/LoginAdmin";
 import { InserirProdutos } from "./pages/InserirProdutos";
 

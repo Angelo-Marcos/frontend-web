@@ -1,4 +1,4 @@
-.product-modal {
+.produtos-modal {
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -13,7 +13,7 @@
     align-items: center;
 }
 
-.product-modal .container {
+.produtos-modal .container {
     background-color: #fff; 
     color: #000000;
     width: 50%;
@@ -28,7 +28,7 @@
 
 
 
-.product-modal .container .content-main {
+.produtos-modal .container .content-main {
     flex: 3;
     display: block;
 
@@ -84,7 +84,7 @@
     transform: rotate(-45deg);
 }
 
-.content-main .product-rodape {
+.content-main .produtos-rodape {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -94,7 +94,7 @@
     margin: 200px 25px 10px 25px;
 }
 
-.product-rodape .product-counter {
+.produtos-rodape .produtos-counter {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -107,14 +107,14 @@
     margin-right: 150px;
 }
 
-.product-counter button {
+.produtos-counter button {
     border: 0;
     color: #B7FF45;
     font: 700;
     background: none;
 }
 
-.product-rodape .product-button {
+.produtos-rodape .produtos-button {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -128,7 +128,7 @@
     background: #B7FF45;
 }
 
-.product-rodape .product-button-altura {
+.produtps-rodape .produtos-button-altura {
     display: flex;
     align-items: center;
     justify-content: space-between;
