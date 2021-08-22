@@ -11,21 +11,21 @@ export function Product() {
 
     return (
         <div>
-            <button className="btn-product"onClick={() => setIsProductModalVisible(true)}>
+            <button className="btn-product" onClick={() => setIsProductModalVisible(true)}>
                 <div className="product">
-                <strong>Nome produto <p>Ingredientes produto</p> </strong>
+                    <strong>Nome produto <p>Ingredientes produto</p> </strong>
                     <img src={product} alt="Imagem Produto" />
                     <p>Valor produto</p>
-                </div>  
-            </button> 
+                </div>
+            </button>
             <div className="modal-product">
                 {isProductModalVisible ? (
-                    <ProductModal onClose={() => setIsProductModalVisible(false)}> 
-                        
+                    <ProductModal onClose={() => setIsProductModalVisible(false)}>
+
                     </ProductModal>
                 ) : null}
             </div>
         </div>
-             
+
     )
-} 
+}

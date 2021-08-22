@@ -1,19 +1,20 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
+
 import logo from '../assets/images/logo.png'
 import exit from '../assets/images/exit.png'
-import bag from '../assets/images/handbag.svg'
+import adicionar from '../assets/images/adicionar.png'
 
 
 import '../styles/pedido.css'
 
+import { Produtos } from '../components/Produtos'
 import { Product } from '../components/Product'
-import { Produto } from '../components/Produtos'
 
 
 
-export function Pedido() {
+export function InserirProdutos() {
 
     return (
         <div id="page-pedido">
@@ -24,7 +25,7 @@ export function Pedido() {
 
                 <div className="exit-buy">
                     <Link to="/"><img src={exit} alt="Exit" /></Link>
-                    <button><img src={bag} alt="Buy" /></button>
+                    <button><img src={adicionar} alt="Buy" /><Produtos /></button>
                 </div>
             </div>
             <main className="grid-main">
@@ -33,10 +34,6 @@ export function Pedido() {
                 <Product />
                 <Product />
                 <Product />
-
-
-
-
 
             </main>
 
