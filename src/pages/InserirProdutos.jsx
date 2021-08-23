@@ -24,7 +24,7 @@ export function InserirProdutos() {
             <div className="header">
                 <a href="#"><img src={logo} alt="Logo do Restaurante" /></a>
 
-                <p>Bem vindo, <strong>Angelo!</strong> </p>
+                <p>Bem vindo, <strong>Usuário!</strong> </p>
 
                 <div className="exit-buy">
                     <Link to="/"><img src={exit} alt="Exit" /></Link>

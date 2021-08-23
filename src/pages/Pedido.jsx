@@ -42,7 +42,7 @@ export function Pedido() {
             <div className="header">
                 <img src={logo} alt="Logo do Restaurante" />
                 
-                <p>Bem vindo, <strong>Angelo!</strong> </p> 
+                <p>Bem vindo, <strong>Usuario!</strong> </p> 
                 
                 <div className="exit-buy">
                     <Link className="btn-buy" to="/"><img src={exit} alt="Exit" /></Link> 
