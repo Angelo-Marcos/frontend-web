@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
+import api from '../services/api'
+
 import logo from '../assets/images/logo.png'
 import exit from '../assets/images/exit.png'
 import bag from '../assets/images/handbag.svg'
@@ -30,7 +32,7 @@ export function Pedido() {
             params.nome_like = search;
         }
 
-        axios.get('http://localhost:5000/products', { params })
+        api.get("products", { params })
             .then((response) => {
                 setProducts(response.data);
             });
